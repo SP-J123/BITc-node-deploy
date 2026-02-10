@@ -48,6 +48,10 @@ export function Header() {
 
                     {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center space-x-1">
+                        <Button variant="ghost" asChild>
+                            <Link href="/">Home</Link>
+                        </Button>
+
                         {/* Retail Dropdown */}
                         <DropdownMenu>
                             <DropdownMenuTrigger asChild>
@@ -128,6 +132,14 @@ export function Header() {
                             <SheetContent side="right" className="w-[300px] sm:w-[400px]">
                                 <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
                                 <div className="flex flex-col space-y-6 mt-8">
+                                    <Link
+                                        href="/"
+                                        className="text-foreground hover:text-primary py-2 font-medium"
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        Home
+                                    </Link>
+
                                     {/* Retail Section */}
                                     <div>
                                         <h3 className="font-semibold text-lg mb-3 text-muted-foreground">Retail</h3>
