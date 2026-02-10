@@ -1,96 +1,59 @@
 import { Metadata } from "next";
-import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-    title: "Acceptable Use Policy",
-    description: "Acceptable Use Policy for BitConnect internet services. Understand permitted and prohibited uses of our network.",
-    alternates: {
-        canonical: `${siteConfig.urls.base}/legal/aup`,
-    },
+    title: "Acceptable Use Policy - BitConnect",
+    description: "Guidelines for acceptable use of BitConnect Internet services.",
 };
 
 export default function AUPPage() {
     return (
-        <div className="container mx-auto px-4 py-16">
-            <div className="max-w-3xl mx-auto prose prose-slate dark:prose-invert">
-                <h1>Acceptable Use Policy</h1>
-                <p className="lead">Last updated: February 2024</p>
-
-                <p>
-                    This Acceptable Use Policy ("AUP") governs your use of internet services
-                    provided by {siteConfig.company.legalName}. Violation of this policy may
-                    result in suspension or termination of services.
-                </p>
-
-                <h2>Prohibited Activities</h2>
-                <p>You may not use our services to:</p>
-
-                <h3>Illegal Activities</h3>
-                <ul>
-                    <li>Violate any applicable local, state, national, or international law</li>
-                    <li>Transmit content that is illegal, harmful, or promotes illegal activities</li>
-                    <li>Infringe on intellectual property rights of others</li>
-                </ul>
-
-                <h3>Network Abuse</h3>
-                <ul>
-                    <li>Launch denial-of-service (DoS) attacks</li>
-                    <li>Attempt to gain unauthorized access to systems or data</li>
-                    <li>Distribute viruses, malware, or other harmful code</li>
-                    <li>Operate open proxies, open relays, or TOR exit nodes</li>
-                    <li>Send unsolicited bulk email (spam)</li>
-                </ul>
-
-                <h3>Harmful Content</h3>
-                <ul>
-                    <li>Distribute child sexual abuse material (CSAM)</li>
-                    <li>Engage in harassment, stalking, or threats</li>
-                    <li>Promote hatred or violence against individuals or groups</li>
-                </ul>
-
-                <h3>Commercial Restrictions</h3>
-                <ul>
-                    <li>Resell or redistribute internet services without authorization</li>
-                    <li>Run commercial hosting services on retail plans</li>
-                    <li>Use services in ways that negatively impact other users</li>
-                </ul>
-
-                <h2>Permitted Use</h2>
-                <p>Our services are intended for:</p>
-                <ul>
-                    <li>Personal web browsing and communication</li>
-                    <li>Streaming media for personal entertainment</li>
-                    <li>Online gaming</li>
-                    <li>Work from home activities</li>
-                    <li>Educational purposes</li>
-                    <li>Business use (on appropriate plans)</li>
-                </ul>
-
-                <h2>Enforcement</h2>
-                <p>
-                    We reserve the right to investigate violations of this AUP. Upon confirmation
-                    of a violation, we may:
-                </p>
-                <ul>
-                    <li>Issue a warning</li>
-                    <li>Temporarily suspend service</li>
-                    <li>Permanently terminate service</li>
-                    <li>Report activities to law enforcement</li>
-                </ul>
-
-                <h2>Reporting Violations</h2>
-                <p>
-                    To report abuse or violations of this policy, please contact us at{" "}
-                    {siteConfig.contact.supportEmail} with relevant details.
-                </p>
-
-                <h2>TRAI DND Compliance</h2>
-                <p>
-                    We comply with TRAI regulations regarding Do Not Disturb (DND) preferences.
-                    If you have registered for DND and receive promotional messages, please
-                    contact us to update your preferences.
-                </p>
+        <div className="space-y-8">
+            <div>
+                <h1 className="text-3xl font-bold mb-4">Acceptable Use Policy (AUP)</h1>
+                <p className="text-muted-foreground">Ensuring a safe and secure internet for everyone.</p>
             </div>
+
+            <section>
+                <p>
+                    This Acceptable Use Policy specifies the actions prohibited by BitConnect to users of the Internet Service. Users may not use our network to transmit, distribute, or store material:
+                </p>
+                <ul className="list-disc pl-6 space-y-2 mt-4">
+                    <li>In violation of any applicable law or regulation, including the IT Act, 2000.</li>
+                    <li>That infringes on copyright, trademark, trade secret, or other intellectual property rights.</li>
+                    <li>That is obscene, defamatory, constitutes an illegal threat, or violates export control laws.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>1. Prohibited Activities</h2>
+                <ul className="list-decimal pl-6 space-y-2">
+                    <li><strong>Spamming:</strong> Sending unsolicited bulk email or messages.</li>
+                    <li><strong>Hacking:</strong> Attempting to gain unauthorized access to any other computer system or network.</li>
+                    <li><strong>Malware Distribution:</strong> Distributing viruses, worms, trojan horses, or other malicious code.</li>
+                    <li><strong>Phishing:</strong> Engaging in fraudulent activities to obtain sensitive personal information.</li>
+                    <li><strong>Denial of Service (DoS):</strong> Launching attacks that disrupt service availability for others.</li>
+                    <li><strong>IP Spoofing:</strong> Faking IP headers to conceal the origin of traffic.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>2. Enforcement</h2>
+                <p>
+                    BitConnect reserves the right to monitor the network for violations of this policy. We may take any of the following actions upon discovering a violation:
+                </p>
+                <ul>
+                    <li>Issuing a warning to the user.</li>
+                    <li>Suspending or terminating the user's account without notice.</li>
+                    <li>Reporting the activity to law enforcement agencies as required by law.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Reporting Violations</h2>
+                <p>
+                    Please report any violations of this policy to our Abuse team at abuse@bitconnect.in (or contact support).
+                </p>
+            </section>
         </div>
     );
 }
