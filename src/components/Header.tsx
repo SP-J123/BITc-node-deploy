@@ -134,21 +134,21 @@ export function Header() {
                                 <div className="flex flex-col space-y-6 mt-8">
                                     <Link
                                         href="/"
-                                        className="text-foreground hover:text-primary py-2 font-medium"
+                                        className="text-lg font-bold text-foreground hover:text-primary transition-colors"
                                         onClick={() => setMobileOpen(false)}
                                     >
                                         Home
                                     </Link>
 
                                     {/* Retail Section */}
-                                    <div>
-                                        <h3 className="font-semibold text-lg mb-3 text-muted-foreground">Retail</h3>
-                                        <div className="flex flex-col space-y-2">
+                                    <div className="space-y-3 pb-4 border-b border-border/50">
+                                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Retail</h3>
+                                        <div className="flex flex-col space-y-3 pl-2 border-l-2 border-border/50">
                                             {navigation.retail.map((item) => (
                                                 <Link
                                                     key={item.name}
                                                     href={item.href}
-                                                    className="text-foreground hover:text-primary py-2"
+                                                    className="text-base text-foreground/80 hover:text-primary transition-colors pl-4"
                                                     onClick={() => setMobileOpen(false)}
                                                 >
                                                     {item.name}
@@ -158,14 +158,14 @@ export function Header() {
                                     </div>
 
                                     {/* Business Section */}
-                                    <div>
-                                        <h3 className="font-semibold text-lg mb-3 text-muted-foreground">Business</h3>
-                                        <div className="flex flex-col space-y-2">
+                                    <div className="space-y-3 pb-4 border-b border-border/50">
+                                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Business</h3>
+                                        <div className="flex flex-col space-y-3 pl-2 border-l-2 border-border/50">
                                             {navigation.business.map((item) => (
                                                 <Link
                                                     key={item.name}
                                                     href={item.href}
-                                                    className="text-foreground hover:text-primary py-2"
+                                                    className="text-base text-foreground/80 hover:text-primary transition-colors pl-4"
                                                     onClick={() => setMobileOpen(false)}
                                                 >
                                                     {item.name}
@@ -175,14 +175,14 @@ export function Header() {
                                     </div>
 
                                     {/* Support Section */}
-                                    <div>
-                                        <h3 className="font-semibold text-lg mb-3 text-muted-foreground">Support</h3>
-                                        <div className="flex flex-col space-y-2">
+                                    <div className="space-y-3 pb-4 border-b border-border/50">
+                                        <h3 className="text-sm font-semibold text-muted-foreground uppercase tracking-wider">Support</h3>
+                                        <div className="flex flex-col space-y-3 pl-2 border-l-2 border-border/50">
                                             {navigation.support.map((item) => (
                                                 <Link
                                                     key={item.name}
                                                     href={item.href}
-                                                    className="text-foreground hover:text-primary py-2"
+                                                    className="text-base text-foreground/80 hover:text-primary transition-colors pl-4"
                                                     onClick={() => setMobileOpen(false)}
                                                 >
                                                     {item.name}
@@ -193,21 +193,21 @@ export function Header() {
 
                                     <Link
                                         href="/about"
-                                        className="text-foreground hover:text-primary py-2 font-medium"
+                                        className="text-lg font-bold text-foreground hover:text-primary transition-colors"
                                         onClick={() => setMobileOpen(false)}
                                     >
                                         About Us
                                     </Link>
 
                                     {/* Mobile CTAs */}
-                                    <div className="flex flex-col space-y-3 pt-4 border-t">
-                                        <Button variant="outline" asChild>
+                                    <div className="flex flex-col space-y-3 pt-2">
+                                        <Button variant="outline" size="lg" className="w-full justify-center" asChild>
                                             <a href={`tel:${siteConfig.contact.phone}`}>
                                                 <Phone className="mr-2 h-4 w-4" />
                                                 Call Us
                                             </a>
                                         </Button>
-                                        <Button className="bg-gradient-to-r from-primary to-cyan-600" asChild>
+                                        <Button size="lg" className="w-full justify-center bg-gradient-to-r from-primary to-cyan-600 shadow-lg" asChild>
                                             <Link href="/plans" onClick={() => setMobileOpen(false)}>
                                                 Get Started
                                             </Link>

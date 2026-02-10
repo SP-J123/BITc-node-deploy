@@ -19,7 +19,7 @@ export default function HomePage() {
     <div className="flex flex-col min-h-screen selection:bg-primary/20">
 
       {/* Hero Section */}
-      <section className="relative py-24 lg:py-32 overflow-visible border-b bg-background/50 backdrop-blur-sm">
+      <section className="relative py-16 lg:py-32 overflow-visible border-b bg-background/50 backdrop-blur-sm">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-background to-background" />
         <div className="absolute -left-[10%] top-[20%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[100px] -z-10 animate-pulse delay-700" />
 
@@ -68,8 +68,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Visual - Dispersed Elements */}
-            <div className="relative mx-auto w-full max-w-md lg:max-w-full aspect-square lg:aspect-auto lg:h-[600px] lg:order-last flex items-center justify-center animate-in zoom-in duration-1000 delay-300">
+            {/* Right Visual - Dispersed Elements (Hidden on Mobile) */}
+            <div className="hidden lg:flex relative mx-auto w-full max-w-md lg:max-w-full aspect-square lg:aspect-auto lg:h-[600px] lg:order-last items-center justify-center animate-in zoom-in duration-1000 delay-300">
               {/* Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-cyan-500/20 rounded-full blur-[100px] opacity-40 animate-pulse" />
 

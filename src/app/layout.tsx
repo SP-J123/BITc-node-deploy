@@ -20,16 +20,16 @@ export const metadata: Metadata = {
   },
   description: siteConfig.company.description,
   keywords: [
-    "broadband Gujarat",
-    "fiber internet Ahmedabad",
+    "Broadband Gujarat",
+    "Fiber Internet Ahmedabad",
     "FTTH Vadodara",
-    "leased line Surat",
-    "ILL Gujarat",
+    "Leased Line Surat",
+    "Corporate Internet Gujarat",
     "ISP Rajkot",
-    "internet service provider",
-    "high speed internet",
-    "fiber broadband",
-    "enterprise bandwidth",
+    "High Speed Internet",
+    "Unlimited Data Plan",
+    "Enterprise Connectivity",
+    "BitConnect Internet",
   ],
   authors: [{ name: siteConfig.company.legalName }],
   creator: siteConfig.company.legalName,
@@ -41,12 +41,32 @@ export const metadata: Metadata = {
     title: `${siteConfig.company.name} - ${siteConfig.company.tagline}`,
     description: siteConfig.company.description,
     siteName: siteConfig.company.name,
+    images: [
+      {
+        url: "/og-image.jpg", // Ensure this exists or use a default
+        width: 1200,
+        height: 630,
+        alt: siteConfig.company.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: `${siteConfig.company.name} - ${siteConfig.company.tagline}`,
     description: siteConfig.company.description,
-    creator: "@bitconnect",
+    creator: "@bitconnect_isp", // Updated handle if known, else keeping generic
+    images: ["/og-image.jpg"],
+  },
+  manifest: "/manifest.json",
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
+  },
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
+    maximumScale: 5,
   },
   robots: {
     index: true,
@@ -59,6 +79,13 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+};
+
+export const viewport: Metadata = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
 };
 
 export default function RootLayout({
