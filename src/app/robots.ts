@@ -1,14 +1,13 @@
 import { MetadataRoute } from "next";
+import { siteConfig } from "@/config/site";
 
 export default function robots(): MetadataRoute.Robots {
     return {
-        rules: [
-            {
-                userAgent: "*",
-                allow: "/",
-                disallow: ["/admin/", "/api/"],
-            },
-        ],
-        sitemap: "https://bitconnect.in/sitemap.xml",
+        rules: {
+            userAgent: "*",
+            allow: "/",
+            disallow: ["/admin/", "/api/"],
+        },
+        sitemap: `${siteConfig.urls.base}/sitemap.xml`,
     };
 }

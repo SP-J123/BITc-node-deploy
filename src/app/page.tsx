@@ -28,23 +28,23 @@ export default function HomePage() {
 
             {/* Left Content */}
             <div className="space-y-8 text-center lg:text-left z-10 lg:pl-12 xl:pl-20">
-              <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm animate-in fade-in slide-in-from-bottom-4 duration-700">
+              <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/5 px-3 py-1 text-sm font-medium text-primary backdrop-blur-sm">
                 <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
                 Gujarat's Fastest Growing ISP
               </div>
 
-              <h1 className="text-5xl md:text-7xl font-bold tracking-tight animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-100 leading-tight">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tight leading-tight min-h-[1.2em]">
                 Experience Internet <br />
                 <span className="bg-gradient-to-r from-primary to-cyan-500 bg-clip-text text-transparent">
                   Without Limits
                 </span>
               </h1>
 
-              <p className="max-w-[600px] mx-auto lg:mx-0 text-xl text-muted-foreground animate-in fade-in slide-in-from-bottom-8 duration-1000 delay-200">
+              <p className="max-w-[600px] mx-auto lg:mx-0 text-xl text-muted-foreground min-h-[3.5rem]">
                 Seamless connectivity for homes and businesses. Built on 15+ years of expertise, designed for the future of digital Gujarat.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-in fade-in slide-in-from-bottom-10 duration-1000 delay-300">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <Button size="lg" className="h-12 px-8 text-lg bg-gradient-to-r from-primary to-cyan-600 hover:from-primary/90 hover:to-cyan-600/90 shadow-lg shadow-primary/20 transition-all hover:scale-105" asChild>
                   <Link href="/plans">
                     View Plans <ArrowRight className="ml-2 h-5 w-5" />
@@ -55,7 +55,7 @@ export default function HomePage() {
                 </Button>
               </div>
 
-              <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground animate-in fade-in slide-in-from-bottom-12 duration-1000 delay-500">
+              <div className="pt-4 flex flex-wrap justify-center lg:justify-start gap-x-8 gap-y-4 text-sm font-medium text-muted-foreground">
                 <div className="flex items-center gap-2">
                   <CheckCircle2 className="h-4 w-4 text-green-500" /> No Hidden Fees
                 </div>
@@ -69,7 +69,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Visual - Dispersed Elements (Hidden on Mobile) */}
-            <div className="hidden lg:flex relative mx-auto w-full max-w-md lg:max-w-full aspect-square lg:aspect-auto lg:h-[600px] lg:order-last items-center justify-center animate-in zoom-in duration-1000 delay-300">
+            <div className="hidden lg:flex relative mx-auto w-full max-w-md lg:max-w-full aspect-square lg:aspect-auto lg:h-[600px] lg:order-last items-center justify-center">
               {/* Background Glow */}
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-cyan-500/20 rounded-full blur-[100px] opacity-40 animate-pulse" />
 
@@ -81,7 +81,7 @@ export default function HomePage() {
               </div>
 
               {/* Floating Cards */}
-              <div className="absolute -top-[10%] left-0 md:-left-[5%] bg-card/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 animate-bounce duration-[4000ms] z-20 min-w-[140px]">
+              <div className="absolute -top-[10%] left-0 md:-left-[5%] bg-card/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 animate-bounce duration-[4000ms] z-20 min-w-[140px] will-change-transform">
                 <div className="flex flex-col items-center text-center gap-2">
                   <div className="p-2 bg-green-500/10 rounded-lg">
                     <Zap className="w-6 h-6 text-green-500" />
@@ -93,7 +93,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="absolute bottom-[5%] -right-[5%] md:-right-[10%] bg-card/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 animate-bounce duration-[5000ms] delay-700 z-20 min-w-[140px]">
+              <div className="absolute bottom-[5%] -right-[5%] md:-right-[10%] bg-card/80 backdrop-blur-md p-4 rounded-2xl shadow-xl border border-white/10 animate-bounce duration-[5000ms] delay-700 z-20 min-w-[140px] will-change-transform">
                 <div className="flex flex-col items-center text-center gap-2">
                   <div className="p-2 bg-blue-500/10 rounded-lg">
                     <Users className="w-6 h-6 text-blue-500" />
